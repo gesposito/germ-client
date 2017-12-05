@@ -1,0 +1,36 @@
+{
+  "name": "germ-client",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "main": "./build/umd/umd.js",
+  "react-scv": {
+    "appBuildEntry": "src/app.js",
+    "umdBuildEntry": "src/module/index.js",
+    "html": {
+      "title": "germ-client",
+      "description": "A nifty React component"
+    },
+    "devServer": {
+      "port": "3500"
+    }
+  },
+  "scripts": {
+    "build": "react-scv build:app && react-scv build:umd",
+    "build:app": "react-scv build:app",
+    "build:umd": "react-scv build:umd",
+    "start": "react-scv start",
+    "test": "react-scv test",
+    "test:debug": "node --inspect-brk ./node_modules/react-scv/bin/react-scv test --runInBand"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "react-scv": "0.0.13"
+  },
+  "dependencies": {
+    "apollo-client-preset": "^1.0.4",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "react-apollo": "^2.0.1"
+  }
+}
