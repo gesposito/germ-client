@@ -6,15 +6,20 @@ import Root from './Root';
 import { ApolloProvider } from 'react-apollo';
 import client from './apolloClient';
 
+import { Grommet } from 'grommet';
+import { vanilla } from 'grommet/themes';
+
 // enables react-hot-reload 3 for any children of Root:
 
 const render = Component => {
   ReactDOM.render(
-    <AppContainer>
-      <ApolloProvider client={client}>
-        <Component />
-      </ApolloProvider>
-    </AppContainer>,
+    <ApolloProvider client={client}>
+      <Grommet theme={vanilla}>
+        <AppContainer>
+          <Component />
+        </AppContainer>
+      </Grommet>
+    </ApolloProvider>,
     document.getElementById('root')
   )
 }
