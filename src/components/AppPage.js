@@ -3,7 +3,7 @@ import React from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import { EventsList } from './events';
+import { EventsList, EventComposition } from './events';
 
 const AppPage = ({ data }) => {
   if (data.loading) {
@@ -13,7 +13,10 @@ const AppPage = ({ data }) => {
   }
   
   return (
-    <EventsList events={data.events} />
+    <section>
+      <EventsList events={data.events} />
+      <EventComposition />
+    </section>
   );
 }
 
@@ -34,7 +37,7 @@ const fragments = gql`
 `;
 
 const query = gql`
-  query {
+  query events {
     events {
       ...event
     }

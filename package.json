@@ -32,6 +32,7 @@
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
     "grommet": "^2.0.0-alpha.5",
+    "grommet-icons": "^0.14.0",
     "history": "^4.7.2",
     "react-apollo": "^2.0.1",
     "react-router-dom": "^4.2.2",
